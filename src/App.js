@@ -1,5 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Card from './components/Card/Card';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 function App() {
   return (
@@ -7,8 +9,15 @@ function App() {
 
       { /* Header */ }
       <Header />
-
+      <Card />
+      
+      <Router>
+        <Routes>
+          <Route path="/" element={<Card />} />
+        </Routes>
+      </Router>
       { /* Tinder Cards */ }
+      
       { /* Buttons */ }
 
       { /* Chats Screen -> 
