@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import SwipeButtons from './components/SwipeButtons/SwipeButtons';
 
 function App() {
   return (
@@ -13,7 +14,14 @@ function App() {
       
       <Router>
         <Routes>
-          <Route path="/" element={<Card />} />
+          <Route path="/" element={
+              <>
+                <Card />
+                <SwipeButtons />
+              </>
+            } 
+          
+          />
         </Routes>
       </Router>
       { /* Tinder Cards */ }

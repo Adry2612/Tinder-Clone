@@ -15,8 +15,10 @@ export default function Card() {
                 name: doc.data().name,
                 image: doc.data().image
             }
+            console.log(person);
 
             setPeople((people) => [...people, person]);
+
         });
     }, []);
 
